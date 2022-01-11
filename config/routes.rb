@@ -1,6 +1,3 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  get "/first_recipe_path", controller: "recipes", action: "first_recipe_method"
 end
