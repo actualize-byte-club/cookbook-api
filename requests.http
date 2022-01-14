@@ -14,4 +14,15 @@ Content-Type: application/json
 }
 
 ### Recipes Show
-GET http://localhost:3000/recipes/2
+GET http://localhost:3000/recipes/4
+
+### Recipes Update
+PATCH http://localhost:3000/recipes/2
+Content-Type: application/json
+
+{
+  "image_url": "https://cdn.britannica.com/14/198514-050-72C159BB/Ice-Cube-2015.jpg"
+}
+
+### Recipes Destroy
+DELETE http://localhost:3000/recipes/4
