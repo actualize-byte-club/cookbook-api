@@ -1,13 +1,20 @@
 class RecipesController < ApplicationController
 
-  # def first_recipe_method
-  #   recipe = Recipe.first # an instance/hash
-  #   render json: recipe.as_json
-  # end
-
   def index
     recipes = Recipe.all
     render json: recipes.as_json
+  end
+
+  def create
+    recipe = Recipe.new(
+      title: params[:title],
+      chef: params[:chef],
+      ingredients: params[:ingredients],
+      directions: params[:directions],
+      prep_time: params[:prep_time]
+    )
+    recipe.save
+    render json: recipe.as_json
   end
 
   def show

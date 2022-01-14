@@ -1,7 +1,17 @@
 ### Recipes Index
-
 GET http://localhost:3000/recipes
 
-### Recipes Show
+### Recipes Create
+POST http://localhost:3000/recipes
+Content-Type: application/json
 
+{
+  "title": "Coffee",
+  "chef": "Dani Zaghian",
+  "ingredients": "Coffee beans",
+  "directions": "Grind beans and brew coffee",
+  "prep_time": 5
+}
+
+### Recipes Show
 GET http://localhost:3000/recipes/2
