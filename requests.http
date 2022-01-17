@@ -14,7 +14,7 @@ Content-Type: application/json
 }
 
 ### Recipes Show
-GET http://localhost:3000/recipes/4
+GET http://localhost:3000/recipes/6
 
 ### Recipes Update
 PATCH http://localhost:3000/recipes/2
