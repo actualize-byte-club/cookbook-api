@@ -1,5 +1,5 @@
 ### Recipes Index
-GET http://localhost:3000/recipes
+GET http://localhost:3000/recipes?search=sandwich
 
 ### Recipes Create
 POST http://localhost:3000/recipes
