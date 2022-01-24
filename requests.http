@@ -4,13 +4,13 @@ GET http://localhost:3000/recipes?search=sandwich
 ### Recipes Create
 POST http://localhost:3000/recipes
 Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDMxNDUxMDV9.F0HZqOvMP8nvmq0IDE3jZB8q0f4MVvVCIi4Kw75N-VU
 
 {
-  "title": "Coffee",
-  "chef": "Dani Zaghian",
-  "ingredients": "Coffee beans",
-  "directions": "Grind beans and brew coffee",
-  "prep_time": 5
+  "title": "Tofu Bibimbap",
+  "ingredients": "Lots of fresh vegetables, rice, tofu, egg",
+  "directions": "Mix all together with spicy sauce",
+  "prep_time": 10
 }
 
 ### Recipes Show
@@ -45,6 +45,6 @@ POST http://localhost:3000/sessions
 Content-Type: application/json
 
 {
-  "email": "ace@gmail.com",
+  "email": "cheddar@gmail.com",
   "password": "password"
 }

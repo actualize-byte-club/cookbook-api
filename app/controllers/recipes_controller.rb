@@ -12,18 +12,20 @@ class RecipesController < ApplicationController
   def create
     recipe = Recipe.new(
       title: params[:title],
-      chef: params[:chef],
       ingredients: params[:ingredients],
       directions: params[:directions],
-      prep_time: params[:prep_time]
+      prep_time: params[:prep_time],
+      user_id: current_user.id
     )
-    recipe.save
-    render json: recipe
+    if recipe.save
+      render json: recipe
+    else
+      render json: {errors: recipe.errors.full_messages}, status: :unprocessable_entity
+    end
   end
 
   def show
     recipe = Recipe.find(params[:id])
-    pp current_user
     render json: recipe
   end
 
@@ -32,7 +34,6 @@ class RecipesController < ApplicationController
     recipe = Recipe.find(params[:id])
     # Update the recipe with the body parameters
     recipe.title = params[:title] || recipe.title
-    recipe.chef = params[:chef] || recipe.chef
     recipe.ingredients = params[:ingredients] || recipe.ingredients
     recipe.directions = params[:directions] || recipe.directions
     recipe.prep_time = params[:prep_time] || recipe.prep_time
