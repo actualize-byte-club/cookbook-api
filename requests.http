@@ -26,3 +26,15 @@ Content-Type: application/json
 
 ### Recipes Destroy
 DELETE http://localhost:3000/recipes/4
+
+
+### Users create (signup)
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "name": "Cheddar",
+  "email": "cheddar@gmail.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
