@@ -23,6 +23,7 @@ class RecipesController < ApplicationController
 
   def show
     recipe = Recipe.find(params[:id])
+    pp current_user
     render json: recipe
   end
 

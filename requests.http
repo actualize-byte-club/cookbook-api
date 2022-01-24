@@ -15,6 +15,7 @@ Content-Type: application/json
 
 ### Recipes Show
 GET http://localhost:3000/recipes/6
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDMxNDAzNjV9.5Pi8UE1Z8DDJniq-Ia6-_dlS_47si9AZiet4sZ1GM78
 
 ### Recipes Update
 PATCH http://localhost:3000/recipes/2
@@ -44,6 +45,6 @@ POST http://localhost:3000/sessions
 Content-Type: application/json
 
 {
-  "email": "asdf@gmail.com",
-  "password": "asdf"
+  "email": "ace@gmail.com",
+  "password": "password"
 }
