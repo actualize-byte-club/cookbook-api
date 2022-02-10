@@ -7,7 +7,6 @@ Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDMxNDUxMDV9.F0HZqOvMP8nvmq0IDE3jZB8q0f4MVvVCIi4Kw75N-VU
 
 {
-  "title": "Tofu Bibimbap",
   "ingredients": "Lots of fresh vegetables, rice, tofu, egg",
   "directions": "Mix all together with spicy sauce",
   "prep_time": 10
