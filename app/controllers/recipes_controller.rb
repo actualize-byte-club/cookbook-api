@@ -23,7 +23,7 @@ class RecipesController < ApplicationController
     if recipe.save
       render json: recipe
     else
-      render json: {errors: recipe.errors.full_messages}, status: :unprocessable_entity
+      render json: {errors: recipe.errors.full_messages}, status: 422
     end
   end
 
