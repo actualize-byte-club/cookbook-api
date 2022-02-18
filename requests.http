@@ -1,5 +1,5 @@
 ### Recipes Index
-GET http://localhost:3000/recipes?search=sandwich
+GET http://localhost:3000/recipes
 
 ### Recipes Create
 POST http://localhost:3000/recipes
@@ -14,7 +14,6 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NDMxNDUxM
 
 ### Recipes Show
 GET http://localhost:3000/recipes/6
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NDMxNDAzNjV9.5Pi8UE1Z8DDJniq-Ia6-_dlS_47si9AZiet4sZ1GM78
 
 ### Recipes Update
 PATCH http://localhost:3000/recipes/2
@@ -47,3 +46,9 @@ Content-Type: application/json
   "email": "cheddar@gmail.com",
   "password": "password"
 }
+
+### Users Index
+GET http://localhost:3000/users
+
+### Users Show
+GET http://localhost:3000/users/1

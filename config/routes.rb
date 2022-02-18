@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   patch "/recipes/:id" => "recipes#update"
   delete "/recipes/:id" => "recipes#destroy"
 
+  get "/users" => "users#index"
   post "/users" => "users#create"
+  get "/users/:id" => "users#show"
   post "/sessions" => "sessions#create"
 end
 

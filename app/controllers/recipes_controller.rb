@@ -8,7 +8,7 @@ class RecipesController < ApplicationController
       recipes = recipes.where("title iLIKE ?", "%#{params[:search]}%")
     end
     recipes = recipes.order(:id)
-    render json: recipes
+    render json: recipes, include: []
   end
 
   def create
