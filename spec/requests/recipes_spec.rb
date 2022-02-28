@@ -21,6 +21,7 @@ RSpec.describe "Recipes", type: :request do
       recipe = JSON.parse(response.body)
       expect(response).to have_http_status(200)
       expect(recipe["title"]).to eq("Raw Eggs")
+      puts recipe
       expect(recipe["ingredients"]).to eq("One live chicken")
     end
   end
