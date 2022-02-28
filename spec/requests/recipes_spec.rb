@@ -24,4 +24,33 @@ RSpec.describe "Recipes", type: :request do
       expect(recipe["ingredients"]).to eq("One live chicken")
     end
   end
+  describe "POST /recipes" do
+    it "should create a recipe when given valid data and Authorization header" do
+      jwt = JWT.encode(
+        {user_id: User.first.id},
+        Rails.application.credentials.fetch(:secret_key_base), # the secret key
+        "HS256" # the encryption algorithm
+      )
+      post "/recipes", params: {title: "New Title", ingredients: "New Ingredients",
+      directions: "New Directions"}, headers: {"Authorization" => "Bearer #{jwt}"}
+      recipe = JSON.parse(response.body)
+      expect(response).to have_http_status(:ok)
+      expect(recipe["title"]).to eq("New Title")
+    end
+    it "should return unauthorized when not given Authorization header" do
+      post "/recipes", params: {title: "New Title"}
+      recipe = JSON.parse(response.body)
+      expect(response).to have_http_status(:unauthorized)
+    end
+    it "should return unprocessable entity when given invalid data" do
+      jwt = JWT.encode(
+        {user_id: User.first.id},
+        Rails.application.credentials.fetch(:secret_key_base), # the secret key
+        "HS256" # the encryption algorithm
+      )
+      post "/recipes", params: {}, headers: {"Authorization" => "Bearer #{jwt}"}
+      recipe = JSON.parse(response.body)
+      expect(response).to have_http_status(:unprocessable_entity)
+    end
+  end
 end
