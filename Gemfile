@@ -49,4 +49,5 @@ end
 
 gem 'active_model_serializers', '~> 0.10.0'
 gem 'jwt'
+gem 'seed_dump'
 

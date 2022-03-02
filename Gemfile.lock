@@ -180,6 +180,9 @@ GEM
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
     rspec-support (3.11.0)
+    seed_dump (3.3.1)
+      activerecord (>= 4)
+      activesupport (>= 4)
     strscan (3.0.1)
     thor (1.2.1)
     timeout (0.2.0)
@@ -205,6 +208,7 @@ DEPENDENCIES
   rack-cors
   rails (~> 7.0.1)
   rspec-rails (~> 5.0.0)
+  seed_dump
   tzinfo-data
 
 RUBY VERSION
