@@ -4,4 +4,5 @@ class User < ApplicationRecord
   validates :name, length: { in: 2..25 }
   validates :password, length: { in: 8..20 }
   has_many :recipes
+  has_many :messages
 end
